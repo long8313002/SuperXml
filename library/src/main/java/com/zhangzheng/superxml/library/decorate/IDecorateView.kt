@@ -3,13 +3,16 @@ package com.zhangzheng.superxml.library.decorate
 import android.content.res.TypedArray
 import android.view.View
 
-internal interface IDecorateView {
+
+abstract class IDecorateView {
+
+     var hasExtraInfo: Boolean = false
 
     /**
      * 初始化解析额外添加的信息
      * @return 是否包含额外信息
      */
-    fun initExtraInfo(typedArray: TypedArray): Boolean
+   abstract fun initExtraInfo(typedArray: TypedArray): Boolean
 
-    fun decorate(view: View)
+    abstract fun decorate(view: View)
 }

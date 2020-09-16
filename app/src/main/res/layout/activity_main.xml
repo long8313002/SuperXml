@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#333333"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,24 +16,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:layout_marginTop="20dp"
         android:layout_width="100dp"
-        app:layout_radius = "20dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:background="@mipmap/order_ic_shipper_default"
-        android:layout_height="100dp"/>
+        app:layout_radius="20dp" />
 
     <View
-        android:layout_marginTop="20dp"
         android:layout_width="100dp"
-        app:layout_radius = "40dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:background="#FF0000"
-        android:layout_height="100dp"/>
+        app:layout_radius="40dp" />
 
     <ImageView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
-        app:layout_src_radius = "10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:src="@mipmap/order_ic_shipper_default"
-        android:layout_height="wrap_content"/>
+        app:layout_src_radius="10dp" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_background_pressedFalse="#FF0000"
+        app:layout_background_pressedTrue="@mipmap/order_ic_shipper_default" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="asdasdasdasd"
+        app:layout_textColor_pressedFalse="#00FF00"
+        app:layout_textColor_pressedTrue="#FF0000" />
 
 </LinearLayout>

@@ -4,6 +4,26 @@
     <declare-styleable name="decorate_view" tools:ignore="ResourceName">
         <attr name="layout_radius" format="reference|dimension" />
         <attr name="layout_src_radius" format="reference|dimension" />
+
+        <attr name="layout_background_enableTrue" format="reference|color" />
+        <attr name="layout_background_enableFalse" format="reference|color" />
+
+        <attr name="layout_background_pressedTrue" format="reference|color" />
+        <attr name="layout_background_pressedFalse" format="reference|color" />
+
+        <attr name="layout_background_selectedTrue" format="reference|color" />
+        <attr name="layout_background_selectedFalse" format="reference|color" />
+
+
+        <attr name="layout_textColor_enableTrue" format="reference|color" />
+        <attr name="layout_textColor_enableFalse" format="reference|color" />
+
+        <attr name="layout_textColor_pressedTrue" format="reference|color" />
+        <attr name="layout_textColor_pressedFalse" format="reference|color" />
+
+        <attr name="layout_textColor_selectedTrue" format="reference|color" />
+        <attr name="layout_textColor_selectedFalse" format="reference|color" />
+
     </declare-styleable>
 
 </resources>

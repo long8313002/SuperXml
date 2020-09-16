@@ -6,7 +6,7 @@ import com.zhangzheng.superxml.library.R
 import com.zhangzheng.superxml.library.ext.setRadius
 import com.zhangzheng.superxml.library.ext.setSrcRadius
 
-internal class SrcRadiusDecorate(var radius: Float = 0f) : IDecorateView {
+internal class SrcRadiusDecorate(var radius: Float = 0f) : IDecorateView() {
 
     override fun initExtraInfo(typedArray: TypedArray): Boolean {
         radius = typedArray.getDimension(R.styleable.decorate_view_layout_src_radius,0f)

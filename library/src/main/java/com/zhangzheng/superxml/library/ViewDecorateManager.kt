@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.View
+import com.zhangzheng.superxml.library.decorate.*
 import com.zhangzheng.superxml.library.decorate.RadiusDecorate
 import com.zhangzheng.superxml.library.decorate.SrcRadiusDecorate
 
@@ -11,7 +12,13 @@ internal object ViewDecorateManager {
 
     private val decorateList = arrayListOf(
         RadiusDecorate(),
-        SrcRadiusDecorate()
+        SrcRadiusDecorate(),
+        BackgroundPressedDecorate(),
+        BackgroundSelectedDecorate(),
+        BackgroundEnableDecorate(),
+        TextColorEnableDecorate(),
+        TextColorPresenterDecorate(),
+        TextColorSelectedDecorate()
     )
 
     fun hasDecorate(context: Context, attributeSet: AttributeSet): Boolean {
@@ -23,6 +30,9 @@ internal object ViewDecorateManager {
         decorateList.forEach {
             if (it.initExtraInfo(typedArray)) {
                 hasDecorateInfo = true
+                it.hasExtraInfo = true
+            }else{
+                it.hasExtraInfo = false
             }
         }
 
@@ -34,7 +44,9 @@ internal object ViewDecorateManager {
     fun decorate(view: View) {
 
         decorateList.forEach {
-            it.decorate(view)
+            if(it.hasExtraInfo){
+                it.decorate(view)
+            }
         }
 
     }
