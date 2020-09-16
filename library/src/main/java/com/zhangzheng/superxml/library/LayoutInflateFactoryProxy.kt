@@ -13,7 +13,7 @@ internal class LayoutInflateFactoryProxy(layoutInflater: LayoutInflater, private
     interface IService {
         fun hasDecorate(attrs: AttributeSet): Boolean
 
-        fun decorate(view: View)
+        fun decorate(view: View):View
     }
 
     private var factory = layoutInflater.factory
@@ -42,7 +42,7 @@ internal class LayoutInflateFactoryProxy(layoutInflater: LayoutInflater, private
         }
 
         if (view != null) {
-            service.decorate(view)
+            view = service.decorate(view)
         }
 
         return view

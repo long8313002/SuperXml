@@ -21,17 +21,23 @@ internal object ViewDecorateManager {
         TextColorSelectedDecorate()
     )
 
+    private val wrapDecorateList = arrayListOf<IWrapDecorateView>(
+        ScrollWrapDecorate()
+    )
+
+
     fun hasDecorate(context: Context, attributeSet: AttributeSet): Boolean {
         val typedArray: TypedArray = context.obtainStyledAttributes(
             attributeSet, R.styleable.decorate_view
         )
 
         var hasDecorateInfo = false
-        decorateList.forEach {
+        (decorateList + wrapDecorateList).forEach {
+            it.attributeSet = attributeSet
             if (it.initExtraInfo(typedArray)) {
                 hasDecorateInfo = true
                 it.hasExtraInfo = true
-            }else{
+            } else {
                 it.hasExtraInfo = false
             }
         }
@@ -41,13 +47,20 @@ internal object ViewDecorateManager {
         return hasDecorateInfo
     }
 
-    fun decorate(view: View) {
+    fun decorate(view: View): View {
 
         decorateList.forEach {
-            if(it.hasExtraInfo){
+            if (it.hasExtraInfo) {
                 it.decorate(view)
             }
         }
 
+        var wrapView = view
+        wrapDecorateList.forEach {
+            if (it.hasExtraInfo) {
+                wrapView = it.decorateView(wrapView)
+            }
+        }
+        return wrapView
     }
 }

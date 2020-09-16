@@ -27,9 +27,7 @@ object SuperXml {
         layoutInflater.factory2 = LayoutInflateFactoryProxy(layoutInflater,object :LayoutInflateFactoryProxy.IService{
             override fun hasDecorate(attrs: AttributeSet) = ViewDecorateManager.hasDecorate(activity,attrs)
 
-            override fun decorate(view: View) {
-                ViewDecorateManager.decorate(view)
-            }
+            override fun decorate(view: View)=ViewDecorateManager.decorate(view)
         })
         setLayoutInflateAllowState(layoutInflater, false)
     }

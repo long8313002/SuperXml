@@ -53,4 +53,29 @@
         app:layout_textColor_pressedFalse="#00FF00"
         app:layout_textColor_pressedTrue="#FF0000" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_canScroll="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可滚动" />
+
+        <View
+            android:layout_width="100dp"
+            android:background="#FF0000"
+            android:layout_height="500dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可滚动" />
+    </LinearLayout>
+
 </LinearLayout>
