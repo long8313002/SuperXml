@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="decorate_view" tools:ignore="ResourceName">
+        <attr name="layout_radius" format="reference|dimension" />
+    </declare-styleable>
+
+</resources>
