@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#333333"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,7 +19,21 @@
         android:layout_marginTop="20dp"
         android:layout_width="100dp"
         app:layout_radius = "20dp"
+        android:background="@mipmap/order_ic_shipper_default"
+        android:layout_height="100dp"/>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        app:layout_radius = "40dp"
         android:background="#FF0000"
         android:layout_height="100dp"/>
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        app:layout_src_radius = "10dp"
+        android:src="@mipmap/order_ic_shipper_default"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

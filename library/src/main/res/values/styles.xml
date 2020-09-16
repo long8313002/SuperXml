@@ -3,6 +3,7 @@
 
     <declare-styleable name="decorate_view" tools:ignore="ResourceName">
         <attr name="layout_radius" format="reference|dimension" />
+        <attr name="layout_src_radius" format="reference|dimension" />
     </declare-styleable>
 
 </resources>
