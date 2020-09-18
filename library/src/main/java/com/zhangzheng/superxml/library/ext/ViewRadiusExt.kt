@@ -13,7 +13,7 @@ fun View.setRadius(radius: Float) {
     val backgroundColor = getBackgroundColor(this)
     val background = getBackground(this)
     if (backgroundColor != null) {
-        this.background = setRoundRectBgByColorValue(this, backgroundColor, radius)
+        this.background = getRoundRectBgByColorValue( backgroundColor, radius)
     }else if(background!=null){
         this.background = BitmapDrawable(toRoundCorner(background,radius))
     }
@@ -29,7 +29,7 @@ fun View.setSrcRadius(radius: Float){
     }
 }
 
-private fun setRoundRectBgByColorValue(view: View, color: Int, radius: Float) :Drawable{
+private fun getRoundRectBgByColorValue( color: Int, radius: Float) :Drawable{
     return GradientDrawable().also {
         it.shape = GradientDrawable.RECTANGLE
         it.cornerRadius = radius

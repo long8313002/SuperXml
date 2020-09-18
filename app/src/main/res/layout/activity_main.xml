@@ -6,14 +6,6 @@
     android:background="#333333"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:layout_width="100dp"
@@ -23,10 +15,13 @@
         app:layout_radius="20dp" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:background="#FF0000"
+        app:layout_border_width="1dp"
+        app:layout_border_color="#0000FF"
         app:layout_radius="40dp" />
 
     <ImageView
@@ -69,8 +64,8 @@
 
         <View
             android:layout_width="100dp"
-            android:background="#FF0000"
-            android:layout_height="500dp"/>
+            android:layout_height="500dp"
+            android:background="#FF0000" />
 
         <TextView
             android:layout_width="wrap_content"

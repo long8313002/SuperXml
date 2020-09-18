@@ -18,7 +18,8 @@ internal object ViewDecorateManager {
         BackgroundEnableDecorate(),
         TextColorEnableDecorate(),
         TextColorPresenterDecorate(),
-        TextColorSelectedDecorate()
+        TextColorSelectedDecorate(),
+        BorderDecorate()
     )
 
     private val wrapDecorateList = arrayListOf<IWrapDecorateView>(

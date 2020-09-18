@@ -26,6 +26,9 @@
 
         <attr name="layout_canScroll" format="reference|boolean" />
 
+
+        <attr name="layout_border_color" format="reference|color" />
+        <attr name="layout_border_width" format="reference|dimension" />
     </declare-styleable>
 
 </resources>
