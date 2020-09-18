@@ -6,7 +6,7 @@ import android.view.View
 import com.zhangzheng.superxml.library.R
 
 
-class BackgroundPressedDecorate(var drawable: StateListDrawable? = null) : IDecorateView() {
+internal class BackgroundPressedDecorate(var drawable: StateListDrawable? = null) : IDecorateView() {
 
 
     override fun initExtraInfo(typedArray: TypedArray): Boolean {

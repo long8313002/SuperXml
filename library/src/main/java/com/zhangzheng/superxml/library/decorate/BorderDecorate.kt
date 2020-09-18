@@ -5,7 +5,7 @@ import android.view.View
 import com.zhangzheng.superxml.library.R
 import com.zhangzheng.superxml.library.ext.setBorder
 
-class BorderDecorate : IDecorateView() {
+internal class BorderDecorate : IDecorateView() {
 
     private var borderColor = 0
     private var borderWidth = 0

@@ -26,6 +26,14 @@ internal object ViewDecorateManager {
         ScrollWrapDecorate()
     )
 
+    fun addDecorate(decorate:IWrapDecorateView){
+        wrapDecorateList.add(decorate)
+    }
+
+    fun addDecorate(decorate:IDecorateView){
+        decorateList.add(decorate)
+    }
+
 
     fun hasDecorate(context: Context, attributeSet: AttributeSet): Boolean {
         val typedArray: TypedArray = context.obtainStyledAttributes(

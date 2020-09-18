@@ -6,8 +6,14 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import com.zhangzheng.superxml.library.decorate.IDecorateView
+import com.zhangzheng.superxml.library.decorate.IWrapDecorateView
 
 object SuperXml {
+
+    fun addDecorate(decorate: IWrapDecorateView) = ViewDecorateManager.addDecorate(decorate)
+
+    fun addDecorate(decorate: IDecorateView) = ViewDecorateManager.addDecorate(decorate)
 
     fun init(app: Application) {
         app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
@@ -24,11 +30,13 @@ object SuperXml {
     private fun hookActivityLayout(activity: Activity) {
         val layoutInflater = LayoutInflater.from(activity)
         setLayoutInflateAllowState(layoutInflater, true)
-        layoutInflater.factory2 = LayoutInflateFactoryProxy(layoutInflater,object :LayoutInflateFactoryProxy.IService{
-            override fun hasDecorate(attrs: AttributeSet) = ViewDecorateManager.hasDecorate(activity,attrs)
+        layoutInflater.factory2 =
+            LayoutInflateFactoryProxy(layoutInflater, object : LayoutInflateFactoryProxy.IService {
+                override fun hasDecorate(attrs: AttributeSet) =
+                    ViewDecorateManager.hasDecorate(activity, attrs)
 
-            override fun decorate(view: View)=ViewDecorateManager.decorate(view)
-        })
+                override fun decorate(view: View) = ViewDecorateManager.decorate(view)
+            })
         setLayoutInflateAllowState(layoutInflater, false)
     }
 

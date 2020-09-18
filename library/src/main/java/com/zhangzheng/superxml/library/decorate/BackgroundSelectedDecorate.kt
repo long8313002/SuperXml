@@ -6,7 +6,7 @@ import android.view.View
 import com.zhangzheng.superxml.library.R
 
 
-class BackgroundSelectedDecorate(var drawable: StateListDrawable? = null) : IDecorateView() {
+internal class BackgroundSelectedDecorate(var drawable: StateListDrawable? = null) : IDecorateView() {
 
     override fun initExtraInfo(typedArray: TypedArray): Boolean {
         val selected = typedArray.getDrawable(

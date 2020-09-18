@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ScrollView
 import com.zhangzheng.superxml.library.R
 
-class ScrollViewProxy(val view: View,attributeSet: AttributeSet?) : ScrollView(view.context,attributeSet) {
+private class ScrollViewProxy(val view: View,attributeSet: AttributeSet?) : ScrollView(view.context,attributeSet) {
 
     override fun addView(child: View?, index: Int, params: ViewGroup.LayoutParams?) {
         if (child?.parent != null) {

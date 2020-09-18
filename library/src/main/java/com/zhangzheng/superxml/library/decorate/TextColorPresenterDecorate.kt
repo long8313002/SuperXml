@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.zhangzheng.superxml.library.R
 
 
-class TextColorPresenterDecorate(var color: ColorStateList? = null) : IDecorateView() {
+internal class TextColorPresenterDecorate(var color: ColorStateList? = null) : IDecorateView() {
 
     override fun initExtraInfo(typedArray: TypedArray): Boolean {
         val pressed = typedArray.getColor(
