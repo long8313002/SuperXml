@@ -29,6 +29,10 @@
 
         <attr name="layout_border_color" format="reference|color" />
         <attr name="layout_border_width" format="reference|dimension" />
+
+        <attr name="layout_dash_width" format="reference|dimension" />
+        <attr name="layout_dash_height" format="reference|dimension" />
+        <attr name="layout_dash_gap" format="reference|dimension" />
     </declare-styleable>
 
 </resources>

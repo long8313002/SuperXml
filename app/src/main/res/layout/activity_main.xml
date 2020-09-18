@@ -6,6 +6,15 @@
     android:background="#333333"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#FF0000"
+        app:layout_dash_gap="10dp"
+        app:layout_dash_height="1dp"
+        app:layout_dash_width="5dp" />
+
 
     <View
         android:layout_width="100dp"
@@ -20,8 +29,8 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:background="#FF0000"
-        app:layout_border_width="1dp"
         app:layout_border_color="#0000FF"
+        app:layout_border_width="1dp"
         app:layout_radius="40dp" />
 
     <ImageView

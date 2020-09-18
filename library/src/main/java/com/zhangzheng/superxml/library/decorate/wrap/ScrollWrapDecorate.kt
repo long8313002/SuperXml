@@ -1,4 +1,4 @@
-package com.zhangzheng.superxml.library.decorate
+package com.zhangzheng.superxml.library.decorate.wrap
 
 import android.content.res.TypedArray
 import android.util.AttributeSet
@@ -36,7 +36,10 @@ internal class ScrollWrapDecorate(var canScroll: Boolean = false) : IWrapDecorat
     }
 
     override fun decorateView(view: View): View {
-        return ScrollViewProxy(view,attributeSet)
+        return ScrollViewProxy(
+            view,
+            attributeSet
+        )
     }
 
 

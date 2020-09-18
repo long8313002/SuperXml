@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import com.zhangzheng.superxml.library.decorate.IDecorateView
-import com.zhangzheng.superxml.library.decorate.IWrapDecorateView
+import com.zhangzheng.superxml.library.decorate.wrap.IWrapDecorateView
 
 object SuperXml {
 
