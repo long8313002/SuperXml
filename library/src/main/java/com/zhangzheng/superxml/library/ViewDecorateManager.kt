@@ -25,7 +25,7 @@ internal object ViewDecorateManager {
         BorderDecorate()
     )
 
-    private val wrapDecorateList = arrayListOf<IWrapDecorateView>(
+    private val wrapDecorateList = arrayListOf(
         ScrollWrapDecorate(),
         DottedLineWrapDecorate()
     )

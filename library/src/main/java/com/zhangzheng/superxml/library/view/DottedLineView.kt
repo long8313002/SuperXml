@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import android.view.View
 import com.zhangzheng.superxml.library.R
 
-class DottedLineView : View {
+internal class DottedLineView : View {
 
     private var dashWidth = 0
     private var dashHeight = 0
