@@ -9,11 +9,12 @@ class TextViewCoverParse : AbsChildViewParse<TextView>() {
     override fun createInfoView(context: Context, attributeSet: AttributeSet?): TextView =
         TextView(context, attributeSet)
 
-    override fun attribute(): Array<*> = arrayOf(
-        AttributeInfo({ textSize }) { value -> textSize = value },
-        AttributeInfo({ textColors }) { value -> setTextColor(value) },
-        AttributeInfo({ text }) { text -> setText(text) }
+    override fun coverAttribute(): MutableList<*> = mutableListOf(
+        AttributeInfo("textSize",{ textSize }) { value -> textSize = value },
+        AttributeInfo("textColor",{ textColors }) { value -> setTextColor(value) },
+        AttributeInfo("text",{ text }) { text -> setText(text) }
     )
+
 
 
 }
