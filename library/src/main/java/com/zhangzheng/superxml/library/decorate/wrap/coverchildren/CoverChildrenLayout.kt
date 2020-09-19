@@ -18,7 +18,8 @@ import android.widget.FrameLayout
 }
 
 private val childViewParseList = arrayListOf<IChildViewParse>(
-    TextViewCoverParse()
+    TextViewCoverParse(),
+    ImageViewCoverParse()
 )
 
 class CoverChildrenLayout(var baseView: ViewGroup, attributeSet: AttributeSet?) : FrameLayout(baseView.context) {

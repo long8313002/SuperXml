@@ -3,7 +3,6 @@ package com.zhangzheng.superxml.library.decorate.wrap.coverchildren
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import java.lang.Exception
 
 abstract class AbsChildViewParse<T : View> : IChildViewParse {
 
@@ -56,22 +55,16 @@ abstract class AbsChildViewParse<T : View> : IChildViewParse {
     abstract fun coverAttribute(): MutableList<*>
 
     override fun updateChildView(childView: View) {
-        if (!checkView(childView)) {
-            return
-        }
         updateAttribute.forEach {
-            it as AttributeInfo<Any>
-            val value = it.getAttr(infoView)
-            it.setAttr(childView as T, value)
+            try {
+                it as AttributeInfo<Any>
+                val value = it.getAttr(infoView)
+                it.setAttr(childView as T, value)
+            }catch (e:ClassCastException){
+
+            }
         }
     }
 
-
-    private fun checkView(view: View) = try {
-        view as T
-        true
-    } catch (e: Exception) {
-        false
-    }
 
 }

@@ -12,12 +12,22 @@
         android:orientation="horizontal"
         android:textColor="#FF0000"
         android:textSize="20sp"
+        android:textStyle="italic"
+        android:scaleType="center"
         app:layout_cover_children="true">
 
+        <ImageView
+
+            android:layout_width="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="50dp"/>
+
         <TextView
+            android:capitalize="none"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FF00FF"
+            android:textStyle="italic"
             android:text="11111" />
 
         <TextView
