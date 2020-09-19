@@ -8,12 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import com.zhangzheng.superxml.library.decorate.IDecorateView
 import com.zhangzheng.superxml.library.decorate.wrap.IWrapDecorateView
+import com.zhangzheng.superxml.library.decorate.wrap.coverchildren.IChildViewParse
+import com.zhangzheng.superxml.library.decorate.wrap.coverchildren.addCoverChildViewParse
 
 object SuperXml {
 
     fun addDecorate(decorate: IWrapDecorateView) = ViewDecorateManager.addDecorate(decorate)
 
     fun addDecorate(decorate: IDecorateView) = ViewDecorateManager.addDecorate(decorate)
+
+    fun addCoverAttributeParse(parse: IChildViewParse){
+        addCoverChildViewParse(parse)
+    }
 
     fun init(app: Application) {
         app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {

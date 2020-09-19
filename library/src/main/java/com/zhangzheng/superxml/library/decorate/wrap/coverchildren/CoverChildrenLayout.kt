@@ -17,10 +17,14 @@ import android.widget.FrameLayout
     fun updateChildView(view: View)
 }
 
-private val childViewParseList = arrayListOf<IChildViewParse>(
+private val childViewParseList = mutableListOf<IChildViewParse>(
     TextViewCoverParse(),
     ImageViewCoverParse()
 )
+
+fun addCoverChildViewParse(parse:IChildViewParse){
+    childViewParseList.add(parse)
+}
 
 class CoverChildrenLayout(var baseView: ViewGroup, attributeSet: AttributeSet?) : FrameLayout(baseView.context) {
 
