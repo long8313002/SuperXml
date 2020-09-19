@@ -7,6 +7,7 @@ import android.view.View
 import com.zhangzheng.superxml.library.decorate.*
 import com.zhangzheng.superxml.library.decorate.RadiusDecorate
 import com.zhangzheng.superxml.library.decorate.SrcRadiusDecorate
+import com.zhangzheng.superxml.library.decorate.wrap.CoverChildrenWrapDecorate
 import com.zhangzheng.superxml.library.decorate.wrap.DottedLineWrapDecorate
 import com.zhangzheng.superxml.library.decorate.wrap.IWrapDecorateView
 import com.zhangzheng.superxml.library.decorate.wrap.ScrollWrapDecorate
@@ -27,7 +28,8 @@ internal object ViewDecorateManager {
 
     private val wrapDecorateList = arrayListOf(
         ScrollWrapDecorate(),
-        DottedLineWrapDecorate()
+        DottedLineWrapDecorate(),
+        CoverChildrenWrapDecorate()
     )
 
     fun addDecorate(decorate: IWrapDecorateView){
