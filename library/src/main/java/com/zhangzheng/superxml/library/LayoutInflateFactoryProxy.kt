@@ -27,9 +27,9 @@ internal class LayoutInflateFactoryProxy(layoutInflater: LayoutInflater, private
             return null
         }
 
-        var view = factory2.onCreateView(parent, name, context, attrs)
+        var view = factory2?.onCreateView(parent, name, context, attrs)
         if (view == null) {
-            view = factory.onCreateView(name, context, attrs)
+            view = factory?.onCreateView(name, context, attrs)
         }
         if (view == null) {
             view = createView(name, null, attrs)
