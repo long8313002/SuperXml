@@ -41,6 +41,12 @@ internal class LayoutInflateFactoryProxy(layoutInflater: LayoutInflater, private
             view = createView(name, "android.view.", attrs)
         }
 
+        if (view == null) {
+            view = compensateCreateView(name,context,attrs)
+        }
+
+
+
         if (view != null) {
             view = service.decorate(view)
         }
@@ -48,17 +54,41 @@ internal class LayoutInflateFactoryProxy(layoutInflater: LayoutInflater, private
         return view
     }
 
-    private fun createView(name:String?,prefix:String?,attrs: AttributeSet?):View?{
-        return try{
-            cloneLayoutInflate.createView(name,prefix,attrs)
-        }catch (e:Exception){
+    private fun compensateCreateView(name: String?, context: Context?, attrs: AttributeSet?): View? {
+        if (name == null || context == null || attrs == null) {
+            return null
+        }
+        var view = reflexCreateView(name, context, attrs)
+        if (view == null) {
+            view = reflexCreateView("android.widget.$name", context, attrs)
+        }
+        if (view == null) {
+            view = reflexCreateView("android.view.$name", context, attrs)
+        }
+        return view
+    }
+
+    private fun reflexCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+        try {
+            val clazz = Class.forName(name)
+            val constructor = clazz.getConstructor(Context::class.java, AttributeSet::class.java)
+            return constructor.newInstance(context, attrs) as View
+        } catch (e: Exception) {
+
+        }
+        return null
+    }
+
+    private fun createView(name: String?, prefix: String?, attrs: AttributeSet?): View? {
+        return try {
+            cloneLayoutInflate.createView(name, prefix, attrs)
+        } catch (e: Exception) {
             null
         }
     }
 
     override fun onCreateView(name: String?, context: Context?, attrs: AttributeSet?) =
         onCreateView(null, name, context, attrs)
-
 
 
 }
