@@ -1,3 +1,6 @@
+
+# android布局能力增加，轻松实现圆角、边框、虚线、属性覆盖等功能。完全无侵入
+
 有排版： https://blog.csdn.net/long8313002/article/details/108703057 
 
 
