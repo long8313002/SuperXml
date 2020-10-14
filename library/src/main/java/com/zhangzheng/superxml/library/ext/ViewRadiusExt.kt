@@ -29,7 +29,20 @@ fun View.setSrcRadius(radius: Float){
     }
 }
 
-private fun getRoundRectBgByColorValue( color: Int, radius: Float) :Drawable{
+internal fun createRadiusDrawable(radius: Float,drawable: Drawable?):Drawable?{
+    if(drawable is ColorDrawable){
+        return getRoundRectBgByColorValue( drawable.color, radius)
+    }
+
+    if(drawable is BitmapDrawable){
+        return BitmapDrawable(toRoundCorner(drawable.bitmap,radius))
+    }
+
+    return drawable
+}
+
+
+ private fun getRoundRectBgByColorValue( color: Int, radius: Float) :Drawable{
     return GradientDrawable().also {
         it.shape = GradientDrawable.RECTANGLE
         it.cornerRadius = radius
