@@ -6,118 +6,118 @@
     android:background="#333333"
     android:orientation="vertical">
 
-    <Button
-        android:layout_margin="20dp"
-        android:id="@+id/btConfirm"
-        android:layout_width="match_parent"
-        app:layout_background_enableTrue ="#FA871E"
-        app:layout_background_enableFalse ="#CCCCCC"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        app:layout_radius="10dp"
-        android:gravity="center"
-        android:enabled="false"
-        android:text="到装货地打卡 15:30:01"
-        android:layout_height="40dp"/>
+<!--    <Button-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:id="@+id/btConfirm"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:layout_background_enableTrue ="#FA871E"-->
+<!--        app:layout_background_enableFalse ="#CCCCCC"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_radius="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:enabled="false"-->
+<!--        android:text="到装货地打卡 15:30:01"-->
+<!--        android:layout_height="40dp"/>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:textColor="#FF0000"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:scaleType="center"
-        app:layout_cover_children="true">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:textColor="#FF0000"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="italic"-->
+<!--        android:scaleType="center"-->
+<!--        app:layout_cover_children="true">-->
 
-        <ImageView
+<!--        <ImageView-->
 
-            android:layout_width="50dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_height="50dp"/>
+<!--            android:layout_width="50dp"-->
+<!--            android:src="@mipmap/ic_launcher"-->
+<!--            android:layout_height="50dp"/>-->
 
-        <TextView
-            android:capitalize="none"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FF00FF"
-            android:textStyle="italic"
-            android:text="11111" />
+<!--        <TextView-->
+<!--            android:capitalize="none"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#FF00FF"-->
+<!--            android:textStyle="italic"-->
+<!--            android:text="11111" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="13dp"
-            android:text="22222" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textSize="13dp"-->
+<!--            android:text="22222" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="14dp"
-            android:text="333333" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textSize="14dp"-->
+<!--            android:text="333333" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:text="444444" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textSize="15dp"-->
+<!--            android:text="444444" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <View
-        android:id="@+id/line1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="#FF0000"
-        app:layout_dash_gap="10dp"
-        app:layout_dash_height="1dp"
-        app:layout_dash_width="5dp" />
-
-
-    <View
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@mipmap/order_ic_shipper_default"
-        app:layout_radius="20dp" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="#FF0000"
-        app:layout_border_color="#0000FF"
-        app:layout_border_width="1dp"
-        app:layout_radius="40dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/order_ic_shipper_default"
-        app:layout_src_radius="10dp" />
-
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        app:layout_background_pressedFalse="#FF0000"
-        app:layout_background_pressedTrue="@mipmap/order_ic_shipper_default" />
+<!--    <View-->
+<!--        android:id="@+id/line1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="#FF0000"-->
+<!--        app:layout_dash_gap="10dp"-->
+<!--        app:layout_dash_height="1dp"-->
+<!--        app:layout_dash_width="5dp" />-->
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:clickable="true"
-        android:text="asdasdasdasd"
-        app:layout_textColor_pressedFalse="#00FF00"
-        app:layout_textColor_pressedTrue="#FF0000" />
+<!--    <View-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@mipmap/order_ic_shipper_default"-->
+<!--        app:layout_radius="20dp" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="#FF0000"-->
+<!--        app:layout_border_color="#0000FF"-->
+<!--        app:layout_border_width="1dp"-->
+<!--        app:layout_radius="40dp" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:src="@mipmap/order_ic_shipper_default"-->
+<!--        app:layout_src_radius="10dp" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_background_pressedFalse="#FF0000"-->
+<!--        app:layout_background_pressedTrue="@mipmap/order_ic_shipper_default" />-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:clickable="true"-->
+<!--        android:text="asdasdasdasd"-->
+<!--        app:layout_textColor_pressedFalse="#00FF00"-->
+<!--        app:layout_textColor_pressedTrue="#FF0000" />-->
 
 
     <LinearLayout
@@ -126,11 +126,15 @@
         android:gravity="center"
         android:orientation="vertical"
         android:scrollbars="none"
+        android:background="#FF0000"
+        android:layout_margin="20dp"
+        app:layout_radius="40dp"
         app:layout_canScroll="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:text="可滚动" />
 
         <View

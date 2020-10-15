@@ -1,6 +1,7 @@
 package com.zhangzheng.superxml.library.decorate.wrap
 
 import android.content.res.TypedArray
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,10 @@ import android.widget.ScrollView
 import com.zhangzheng.superxml.library.R
 
 private class ScrollViewProxy(val view: View,attributeSet: AttributeSet?) : ScrollView(view.context,attributeSet) {
+
+    init {
+        setBackgroundColor(Color.TRANSPARENT)
+    }
 
     override fun addView(child: View?, index: Int, params: ViewGroup.LayoutParams?) {
         if (child?.parent != null) {
